@@ -21,7 +21,8 @@ RUN yum install -y python3 python3-pip  --nodocs \
     && pip3 install flask requests
 
 # TODO (optional): Copy the builder files into /opt/app-root
-COPY ./app/ /opt/app-root/
+COPY ./app/ /opt/app-root/ 
+COPY ./change-env.py /opt/app-root
 
 # TODO: Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7 image
 # sets io.openshift.s2i.scripts-url label that way, or update that label

@@ -18,7 +18,7 @@ LABEL  io.s2i.scripts-url=image:///usr/libexec/s2i
 # RUN yum install -y ... && yum clean all -y
 RUN yum install -y python3 python3-pip  --nodocs \
     && yum clean all -y \
-    && pip3 install flask
+    && pip3 install flask requests
 
 # TODO (optional): Copy the builder files into /opt/app-root
 COPY ./app/ /opt/app-root/
